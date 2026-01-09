@@ -18,6 +18,8 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -26,6 +28,15 @@ jobs:
         with:
           python-version: '3.13' 
 
+
       
-      - name: Packages
+      - name: Debug working directory
+        run: |
+          pwd
+          ls -la
+          find . -maxdepth 2 -name "requirements*.txt" -print
+
+
+      
+      - name: Installing Dependencies
         run: pip install -r requirements.txt
