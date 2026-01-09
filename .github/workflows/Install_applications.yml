@@ -28,6 +28,7 @@ jobs:
         with:
           python-version: '3.13' 
           pip-version: '25.3'
+          cache: 'pip'
 
       - run: |
            pip install numpy
