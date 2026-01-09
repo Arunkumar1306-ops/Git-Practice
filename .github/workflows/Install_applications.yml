@@ -27,17 +27,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13' 
-
-
-      
-      - name: Debug working directory
-        run: |
-          pwd
-          ls -la
-          find . -maxdepth 2 -name "requirements*.txt" -print
-
-
-      
+          cache: 'pip'
       - name: Installing Dependencies
         run: | 
             python -m pip install --upgrade pip
