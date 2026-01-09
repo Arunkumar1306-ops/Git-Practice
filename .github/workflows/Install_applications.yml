@@ -27,16 +27,19 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13' 
+          pip-version: '25.0.1'
+          pip-install: -r requirements.txt
+
 
       
-      - name: Debug repo layout
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Top-level files:"
-          ls -la
-          echo "Search for requirements files:"
-          find . -maxdepth 5 -iname "requirements*.txt" -print
+      # - name: Debug repo layout
+      #   run: |
+      #     echo "Current directory:"
+      #     pwd
+      #     echo "Top-level files:"
+      #     ls -la
+      #     echo "Search for requirements files:"
+      #     find . -maxdepth 5 -iname "requirements*.txt" -print
 
       # - run: |
       #     python -m pip install --upgrade pip
