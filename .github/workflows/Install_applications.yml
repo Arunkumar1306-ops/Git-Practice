@@ -27,8 +27,12 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13' 
-          pip-version: '25.0.1'
-          pip-install: -r requirements.txt
+          pip-version: '25.3'
+
+      - run: |
+           pip install numpy
+           pip install -r requirements.txt
+         
 
 
       
@@ -41,7 +45,5 @@ jobs:
       #     echo "Search for requirements files:"
       #     find . -maxdepth 5 -iname "requirements*.txt" -print
 
-      # - run: |
-      #     python -m pip install --upgrade pip
-      #     pip install -r requirements.txt
+
 
